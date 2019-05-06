@@ -13,18 +13,18 @@ public class GameOverManager : MonoBehaviour
     void Awake()
     {
         // Set up the reference.
-
-        player = GameObject.FindGameObjectWithTag("player");
+        anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
 
     void Update()
     {
         // If the player has run out of health...
-        if (player.GetComponent<player_controller>().pollution>=100 || player.GetComponent<player_controller>().timeLeft <= 0)
+        if (player.GetComponent<player_controller>().pollution <= 0 || player.GetComponent<player_controller>().pollution>=100 || player.GetComponent<player_controller>().timeLeft <= 0)
         {
             // ... tell the animator the game is over.
-            anim.SetTrigger("GameOver");
+            anim.SetTrigger("gameover");
 
             // .. increment a timer to count up to restarting.
             restartTimer += Time.deltaTime;
