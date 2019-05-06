@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameOverManager : MonoBehaviour
 {
     public GameObject player;       // Reference to the player's health.
@@ -28,14 +29,19 @@ public class GameOverManager : MonoBehaviour
             // ... tell the animator the game is over.
             anim.SetTrigger("gameover");
             GameOver = true;
+            
+        }
+        else if ((player.GetComponent<player_controller>().pollution <= 0 || player.GetComponent<player_controller>().pollution >= 100 || player.GetComponent<player_controller>().timeLeft <= 0))
+        {
             // .. increment a timer to count up to restarting.
             restartTimer += Time.deltaTime;
 
             // .. if it reaches the restart delay...
             if (restartTimer >= restartDelay)
             {
+                SceneManager.LoadScene("startscene");
                 // .. then reload the currently loaded level.
-               // SceneManager.LoadScene(Application.loadedLevel);
+                // SceneManager.LoadScene(Application.loadedLevel);
             }
         }
     }

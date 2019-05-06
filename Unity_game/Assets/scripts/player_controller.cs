@@ -9,6 +9,7 @@ public class player_controller : MonoBehaviour {
     private CharacterController charController;
     public Image pollBar;
     public Image TimeBar;
+
     public float timeLeft;
     public bool moretrash=true;
     public float movementSpeed = 3.1f;
@@ -17,7 +18,7 @@ public class player_controller : MonoBehaviour {
     public float rotate_degreePerSecond = 1f;
     public float pollution=10f;
     public float pollution_max= 20f;
-
+    public GameObject collectedTrash;
     public float pollutionOnMovement= 0.002f;
     public float trashPollution=1.0f;
     public int total_Existing=0 ;
@@ -31,6 +32,7 @@ public class player_controller : MonoBehaviour {
         smokestop = GameObject.Find("Smoke").GetComponent<ParticleSystem>();
         pollBar = GameObject.FindGameObjectWithTag("pollution").GetComponent<Image>();
         TimeBar = GameObject.FindGameObjectWithTag("time").GetComponent<Image>();
+        collectedTrash = GameObject.FindGameObjectWithTag("trashCollected");
     }
 
     // Update is called once per frame
@@ -40,9 +42,11 @@ public class player_controller : MonoBehaviour {
         pollBar.fillAmount = ( pollution) / 100.0f;
         TimeBar.fillAmount = (timeLeft)/100.0f;
         timeLeft -= Time.deltaTime;
+        collectedTrash.GetComponent<Text>().text = "" + collected;
         var emi = smokestop.emission;
         if (Input.GetAxis("Vertical") == 0 && Input.GetAxis("Horizontal") == 0) emi.enabled = false;
         else emi.enabled = true;
+
     }
 
 

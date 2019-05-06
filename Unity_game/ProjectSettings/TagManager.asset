@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - garbage
+  - pollution
+  - score
+  - time
+  - Water Volume
+  - trashCollected
   layers:
   - Default
   - TransparentFX

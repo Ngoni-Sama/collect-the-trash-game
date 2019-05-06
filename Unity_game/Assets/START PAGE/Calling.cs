@@ -12,4 +12,12 @@ public class Calling : MonoBehaviour {
     public void start_game() {
         SceneManager.LoadScene("game scene");
     }
+    public void menu()
+    {
+        SceneManager.LoadScene("startscene");
+    }
+    public void help()
+    {
+        SceneManager.LoadScene("helpScene");
+    }
 }
