@@ -5,6 +5,7 @@ using UnityEngine;
 public class player_controller : MonoBehaviour {
 
     // Use this for initialization
+    ParticleSystem smokestop;
     private CharacterController charController;
     public bool moretrash=true;
     public float movementSpeed = 3.1f;
@@ -18,16 +19,21 @@ public class player_controller : MonoBehaviour {
     public int total_Existing=0 ;
     float onrun=0.0f;
     int collected;
+
     // Use this for initialization
     void Awake()
     {
         charController = GetComponent<CharacterController>();
+        smokestop = GameObject.Find("Smoke").GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
     void FixedUpdate(){
         move();
         rotate();
+        var emi = smokestop.emission;
+        if (Input.GetAxis("Vertical") == 0 && Input.GetAxis("Horizontal") == 0) emi.enabled = false;
+        else emi.enabled = true;
     }
 
 
@@ -35,19 +41,20 @@ public class player_controller : MonoBehaviour {
     {
         if (Input.GetAxis("Vertical") > 0){
             Vector3 moveDirection = transform.forward;
-            moveDirection.y -= gravity * Time.fixedDeltaTime;
+            //moveDirection.y -= gravity * Time.fixedDeltaTime;
             charController.Move(moveDirection * movementSpeed * Time.fixedDeltaTime);
             pollution += pollutionOnMovement;
         }
         else if (Input.GetAxis("Vertical") < 0){
             Vector3 moveDirection = -transform.forward;
-            moveDirection.y -= gravity * Time.fixedDeltaTime;
+            //moveDirection.y -= gravity * Time.fixedDeltaTime;
             charController.Move(moveDirection * movementSpeed * Time.fixedDeltaTime);
             pollution += pollutionOnMovement;
         }
         else{ 
             charController.Move(Vector3.zero);
             pollution -= pollutionOnMovement;
+            Debug.Log("Stoped");
         }
      }
 

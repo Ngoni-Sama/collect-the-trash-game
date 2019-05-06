@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 64682161827575584}
   - component: {fileID: 65825128761842848}
   - component: {fileID: 54330955989319944}
+  - component: {fileID: 122116073271290144}
   m_Layer: 0
   m_Name: BP_champagne_color_2
   m_TagString: garbage
@@ -231,3 +232,14 @@ MonoBehaviour:
   normalizedVoxelSize: 0.5
   dragInWater: 1
   angularDragInWater: 1
+--- !u!122 &122116073271290144
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1619506378958066}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_Size: 4.21

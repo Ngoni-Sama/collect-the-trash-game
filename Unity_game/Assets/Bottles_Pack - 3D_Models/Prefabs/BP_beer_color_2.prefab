@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 64539018864925146}
   - component: {fileID: 54112794881372366}
   - component: {fileID: 65294981068426994}
+  - component: {fileID: 122778966408469400}
   m_Layer: 0
   m_Name: BP_beer_color_2
   m_TagString: garbage
@@ -231,3 +232,14 @@ MonoBehaviour:
   rows: 10
   columns: 10
   quadSegmentSize: 1
+--- !u!122 &122778966408469400
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1202142091014386}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_Size: 5

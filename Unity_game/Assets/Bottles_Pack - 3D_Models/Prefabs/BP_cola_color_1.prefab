@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 64050751756779942}
   - component: {fileID: 65993330891809748}
   - component: {fileID: 54800562111936534}
+  - component: {fileID: 122778628363185846}
   m_Layer: 0
   m_Name: BP_cola_color_1
   m_TagString: garbage
@@ -158,7 +159,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1618439066370834}
-  m_Mesh: {fileID: 4300000, guid: 238e5cbb51afd304d8cfd8e29cea2a80, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!54 &54800562111936534
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -198,8 +199,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.061800003, y: 0.2137, z: 0.060900003}
-  m_Center: {x: -0.000035643578, y: 0.10805, z: -0.00002441369}
+  m_Size: {x: 10, y: 5, z: 10}
+  m_Center: {x: 5, y: -2.5, z: 5}
 --- !u!114 &114493093049865676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,3 +232,14 @@ MonoBehaviour:
   rows: 10
   columns: 10
   quadSegmentSize: 1
+--- !u!122 &122778628363185846
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618439066370834}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 5
