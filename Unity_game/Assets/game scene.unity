@@ -6827,6 +6827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pollBar: {fileID: 0}
   TimeBar: {fileID: 0}
+  timeLeft: 100
   moretrash: 1
   movementSpeed: 25
   gravity: 9.814
@@ -7156,13 +7157,13 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1929784531}
-  m_LocalRotation: {x: 0.21415402, y: -0, z: -0, w: 0.9767999}
-  m_LocalPosition: {x: -3.0000305, y: 100.4, z: -130.6}
+  m_LocalRotation: {x: 0.2292004, y: 0, z: 0, w: 0.9733793}
+  m_LocalPosition: {x: 0, y: 53.2, z: -88.1}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1889176850}
   m_RootOrder: 58
-  m_LocalEulerAnglesHint: {x: 24.732, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 26.5, y: 0, z: 0}
 --- !u!81 &1929784533
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7930,7 +7931,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 791679329
+  randomSeed: -1104111636
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11238,7 +11239,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2048297320}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -0.2, y: -3.8, z: -17}
+  m_LocalPosition: {x: -0.2, y: -3.8, z: -6.2}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1889176850}
