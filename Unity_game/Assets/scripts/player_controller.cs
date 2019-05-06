@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class player_controller : MonoBehaviour {
 
     // Use this for initialization
     ParticleSystem smokestop;
     private CharacterController charController;
+    public Image pollBar;
+    public Image TimeBar;
     public bool moretrash=true;
     public float movementSpeed = 3.1f;
     public float gravity = 9.814f;
@@ -25,12 +27,14 @@ public class player_controller : MonoBehaviour {
     {
         charController = GetComponent<CharacterController>();
         smokestop = GameObject.Find("Smoke").GetComponent<ParticleSystem>();
+        pollBar = GameObject.FindGameObjectWithTag("pollution").GetComponent<Image>();
     }
 
     // Update is called once per frame
     void FixedUpdate(){
         move();
         rotate();
+        pollBar.fillAmount = ( pollution) / 100.0f;
         var emi = smokestop.emission;
         if (Input.GetAxis("Vertical") == 0 && Input.GetAxis("Horizontal") == 0) emi.enabled = false;
         else emi.enabled = true;
