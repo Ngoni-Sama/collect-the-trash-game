@@ -9,6 +9,7 @@ TagManager:
   - Fire
   - pollution
   - time
+  - score
   layers:
   - Default
   - TransparentFX
